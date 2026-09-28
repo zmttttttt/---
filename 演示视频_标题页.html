@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>演示视频标题页</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: linear-gradient(135deg, #0E2F4F 0%, #1F4E79 45%, #2E75B6 100%);
+    color: #fff;
+    position: relative;
+  }
+  /* 背景装饰圆 */
+  .deco { position: absolute; border-radius: 50%; opacity: .08; background: #fff; }
+  .d1 { width: 700px; height: 700px; top: -260px; left: -200px; }
+  .d2 { width: 520px; height: 520px; bottom: -200px; right: -140px; }
+  .d3 { width: 200px; height: 200px; top: 140px; right: 220px; opacity: .06; }
+  /* 顶部大赛名 */
+  .top {
+    position: absolute; top: 70px; left: 0; width: 100%;
+    text-align: center; font-size: 30px; letter-spacing: 6px;
+    color: rgba(255,255,255,.85); font-weight: 300;
+  }
+  .top b { color: #FFD966; font-weight: 700; }
+  /* 主内容 */
+  .wrap {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 90px;
+  }
+  .left { text-align: left; max-width: 980px; }
+  .pinyin {
+    font-size: 34px; letter-spacing: 10px; color: #9CC3E5;
+    margin-bottom: 18px; font-weight: 300;
+  }
+  h1 {
+    font-size: 150px; letter-spacing: 14px; font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 0 8px 30px rgba(0,0,0,.35);
+  }
+  h1 .c { color: #FFD966; }
+  .subtitle {
+    margin-top: 30px; font-size: 46px; font-weight: 500; letter-spacing: 4px;
+    color: #E8F1FA;
+  }
+  .subtitle em { font-style: normal; color: #FFD966; }
+  .tags { margin-top: 52px; display: flex; gap: 20px; }
+  .tag {
+    padding: 14px 30px; border: 2px solid rgba(255,255,255,.55);
+    border-radius: 999px; font-size: 26px; letter-spacing: 2px;
+    background: rgba(255,255,255,.10); color: #fff; white-space: nowrap;
+  }
+  /* 底部作者信息 */
+  .bottom {
+    position: absolute; bottom: 78px; left: 0; width: 100%;
+    text-align: center; font-size: 32px; letter-spacing: 4px;
+    color: rgba(255,255,255,.92);
+  }
+  .bottom span { margin: 0 36px; }
+  .bottom .placeholder { color: #9CC3E5; border-bottom: 2px dashed #9CC3E5; padding: 0 26px 4px; }
+  /* 吉祥物 */
+  .mascot { width: 430px; height: 470px; flex: none; position: relative; }
+</style>
+</head>
+<body>
+  <div class="deco d1"></div>
+  <div class="deco d2"></div>
+  <div class="deco d3"></div>
+
+  <div class="top">无锡市<b>“人工智能 + 教育”</b>大赛 · 赛道一：智能体开发</div>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="pinyin">C YU ZHI XUE</div>
+      <h1><span class="c">C</span>语智学</h1>
+      <div class="subtitle">C语言选择结构课程智能助教 <em>「小C老师」</em></div>
+      <div class="tags">
+        <div class="tag">🧑‍🏫 AI 教师人设</div>
+        <div class="tag">📊 学情分析</div>
+        <div class="tag">🔌 国产大模型</div>
+        <div class="tag">📱 单文件 · 零安装</div>
+      </div>
+    </div>
+
+    <div class="mascot">
+      <svg viewBox="0 0 430 470" xmlns="http://www.w3.org/2000/svg">
+        <!-- 光圈 -->
+        <ellipse cx="215" cy="440" rx="150" ry="18" fill="rgba(0,0,0,.18)"/>
+        <circle cx="215" cy="215" r="205" fill="rgba(255,255,255,.08)"/>
+        <!-- 身体 -->
+        <path d="M105 430 C105 340 155 305 215 305 C275 305 325 340 325 430 Z" fill="#F2F7FC"/>
+        <!-- 领结/围巾 -->
+        <path d="M215 305 L185 335 L215 355 L245 335 Z" fill="#2E75B6"/>
+        <circle cx="215" cy="335" r="10" fill="#FFD966"/>
+        <!-- 胸前 C 徽章 -->
+        <rect x="188" y="370" width="54" height="54" rx="12" fill="#1F4E79"/>
+        <text x="215" y="410" font-family="Consolas, monospace" font-size="40" font-weight="bold" fill="#FFD966" text-anchor="middle">C</text>
+        <!-- 头 -->
+        <circle cx="215" cy="185" r="120" fill="#FFE0C2"/>
+        <!-- 头发 -->
+        <path d="M95 185 C95 100 150 60 215 60 C280 60 335 100 335 185 C335 150 300 128 215 128 C130 128 95 150 95 185 Z" fill="#3B3A39"/>
+        <!-- 眼镜 -->
+        <g stroke="#1F4E79" stroke-width="7" fill="rgba(255,255,255,.85)">
+          <circle cx="172" cy="192" r="34"/>
+          <circle cx="258" cy="192" r="34"/>
+          <line x1="206" y1="192" x2="224" y2="192"/>
+        </g>
+        <!-- 眼睛 -->
+        <circle cx="172" cy="196" r="10" fill="#262626"/>
+        <circle cx="258" cy="196" r="10" fill="#262626"/>
+        <circle cx="176" cy="192" r="3.5" fill="#fff"/>
+        <circle cx="262" cy="192" r="3.5" fill="#fff"/>
+        <!-- 腮红 -->
+        <ellipse cx="130" cy="238" rx="18" ry="11" fill="#FFB3A0" opacity=".8"/>
+        <ellipse cx="300" cy="238" rx="18" ry="11" fill="#FFB3A0" opacity=".8"/>
+        <!-- 笑脸 -->
+        <path d="M185 250 Q215 275 245 250" stroke="#B05C3A" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <!-- 教鞭 -->
+        <g transform="rotate(18 320 350)">
+          <rect x="312" y="150" width="16" height="230" rx="8" fill="#C58A5A"/>
+          <circle cx="320" cy="140" r="16" fill="#FFD966"/>
+        </g>
+        <!-- 举手 -->
+        <circle cx="345" cy="300" r="26" fill="#FFE0C2"/>
+        <path d="M322 322 L352 285" stroke="#FFE0C2" stroke-width="46" stroke-linecap="round"/>
+        <!-- 知识火花 -->
+        <g fill="#FFD966">
+          <path d="M80 110 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6 Z"/>
+          <path d="M370 80 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5 Z" opacity=".8"/>
+          <circle cx="60" cy="220" r="7" opacity=".7"/>
+          <circle cx="390" cy="200" r="6" opacity=".6"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <span>参赛单位：<span class="placeholder">（单位名称）</span></span>
+    <span>作者：<span class="placeholder">（姓名）</span></span>
+  </div>
+</body>
+</html>
